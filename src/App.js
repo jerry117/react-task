@@ -22,7 +22,7 @@ import {Tasks} from "./components/Tasks";
 // }
 
 const App = () => {
-  const [tasks] = useState([
+  const [tasks, setTasks] = useState([
     {
         id: 1,
         text:'doctors appointments',
@@ -43,10 +43,18 @@ const App = () => {
     },
 
 ])
+//  delete task
+const deleteTask = (id ) => {
+  // console.log('delete',id)
+  setTasks(tasks.filter((task)=> task.id !==id))
+  console.log('delete',id)
+  
+}
+
   return (
     <div className="container">
       <Header />
-      <Tasks  tasks={tasks}/>
+      <Tasks  tasks={tasks} onDelete={deleteTask} />
     </div>
   )
 }
