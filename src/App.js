@@ -23,6 +23,7 @@ import AddTask from "./components/AddTask";
 // }
 
 const App = () => {
+  
   const [tasks, setTasks] = useState([
     {
         id: 1,
@@ -47,6 +48,9 @@ const App = () => {
 
 // Add Task
 const addTask =(task) => {
+  const id = Math.floor(Math.random() * 10000) + 1;
+  const newTask = {id, ...task}
+  setTasks([...tasks, newTask])
   console.log(task)
 }
 
