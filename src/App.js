@@ -100,14 +100,33 @@ const toggleReminder = async (id) => {
 
     <Routes>
       
-       {/* <Route path='/' exact render={(props)=> (
-         <>
-        {showAddTask && <AddTask onAdd={addTask}/>}
-        {tasks.length >0 ? (<Tasks  tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />): ('No tasks to show')}
-        </>
-      )}/> */}
       <Route exact path='/about' element={<About/>} />
       </Routes>
+
+      <p align='left'>p标签left属性</p>
+      <p align='center'>p标签center属性</p>
+      <p align='right'>p标签right属性</p>
+      {/* hr 下划线 i or hr 斜体 b 加粗 */}
+      <hr/>
+      <i>这是i标签</i>
+      <hr/>
+      <em>这是em标签</em>
+      <hr/>
+      <b>这是b标签</b>
+      <hr/>
+      <strong>这是strong标签</strong>
+      <sub>这是sub标签</sub>
+      <sup>这是sup标签</sup>
+      <hr/>
+      <p>这是&lt;p&gt;</p>
+      <p>版权符号：&copy;</p>
+      <p>商标符号：&trade;</p>
+      <p>不断行的空白：&nbsp;1</p>
+      <hr/>
+      <p align='justigy'>p标签
+      {/* br 换行  &nbsp;空格  pre 保留段落原本格式 */}
+       <br/>&nbsp;&nbsp;&nbsp;&nbsp;justigy属性</p>
+       <pre>保留段落原本格式</pre>
       <Footer/>
     </div>
     </Router>
