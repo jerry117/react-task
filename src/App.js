@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import {Tasks} from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import About from "./components/About";
+import to from "./images/logo192.png";
 
 
 
@@ -91,6 +92,7 @@ const toggleReminder = async (id) => {
 }
 
   return (
+    <div>
     <Router>
     <div className="container">
       <Header  onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask} />
@@ -123,6 +125,31 @@ const toggleReminder = async (id) => {
       <p>商标符号：&trade;</p>
       <p>不断行的空白：&nbsp;1</p>
       <hr/>
+      {/* 无序列表  circle 空心点 square 正方形 disc 圆点  */}
+      <h3>无序列表</h3>
+      <ul type='li'>
+        <li type='disc' >HTML称为超文本标记语言</li>
+        <li type='square'>html它包括一系列标签。</li>
+        <li type='circle'>html文本是由html命令组成的描述性文本</li>
+        <li>html命令可以说明文字，图形、动画、声音、表格、链接等</li>
+      </ul>
+      <hr/>
+      {/* 有序列表  1 排序为数字 a 小写字母 A 大写字母 i 小写罗马数字 I 大写罗马数字 */}
+      <h3>有序列表</h3>
+      <ol>
+        <li type='1' >HTML称为超文本标记语言</li>
+        <li type='a'>html它包括一系列标签。</li>
+        <li type='A'>html文本是由html命令组成的描述性文本</li>
+        <li type='i'>html命令可以说明文字，图形、动画、声音、表格、链接等</li>    
+        <li type='I'>html命令可以说明文字，图形、动画、声音、表格、链接等</li>    
+      </ol>
+      <hr/>
+      {/* 定义列表  dt 表头  dd 列表项 */}
+      <h3>定义列表</h3>
+      <dl>
+        <dt>html描述</dt>
+        <dd>html它包括一系列标签。</dd>
+      </dl>
       <p align='justigy'>p标签
       {/* br 换行  &nbsp;空格  pre 保留段落原本格式 */}
        <br/>&nbsp;&nbsp;&nbsp;&nbsp;justigy属性</p>
@@ -130,6 +157,22 @@ const toggleReminder = async (id) => {
       <Footer/>
     </div>
     </Router>
+    <div>
+      {/* img 图像标签  a href  超链接  target 链接目标窗口 _self当前窗口打开，默认 _blank 新窗口打开 _top 、_parent   title 链接提示文字  name 链接名字 */}
+    <img src={to} alt="肯" height='40px' width='40px' />
+    <img src="https://pics4.baidu.com/feed/09fa513d269759eeb97c10b892f9091d6d22dfa6.jpeg@f_auto?token=24067a25bae14bbdce5e1654838dc33c" alt="tom" />
+    <a href="https://pics4.baidu.com/feed/09fa513d269759eeb97c10b892f9091d6d22dfa6.jpeg@f_auto?token=24067a25bae14bbdce5e1654838dc33c">neirong</a>
+    {/* 锚点链接 name + href 把a标签的href属性指定到已定义的name */}
+    <a href="#name1">目录1</a>
+    <br/>
+    <a href="./xxx.png" title="这是title属性" name='name1' target='_blank'>目录1的内容</a>
+    {/* 锚链接（不同页面） 在页面1添加name属性，在页面2的a标签下，href="页面1.html#锚点名" */}
+    {/* 电子邮件链接  */}
+    <a href='2335353@qq.com' title="点击发送邮件">点击发送邮件</a>
+    {/* 文件下载 */}
+    <a href='content.zip' title="点击下载">点击下载</a>
+    </div>
+    </div>
   )
 }
 
