@@ -338,6 +338,58 @@ const App = () => {
           </tfoot>
         </table>
       </div>
+      <div>
+        <table
+          border="6"
+          width="500px"
+          bgcolor="#f2f2f2"
+          cellspacing="0"
+          cellpadding="5"
+          align="center"
+        >
+          <caption> 统计图 </caption>
+          <thead>
+            {/* colspan：跨列属性，同一行，跨多列  跨行属性，rowspan  */}
+            <tr bgcolor="#2e8b57">
+              <th rowspan="2">城市</th>
+              <th colspan="2">2018</th>
+              <th rowspan="2">2019</th>
+              <th rowspan="2">2020</th>
+            </tr>
+            <tr bgcolor="#2e8b57">
+              <th>上半年</th>
+              <th>下半年</th>
+            </tr>
+          </thead>
+          <tbody align="center" valign="middle">
+            <tr>
+              <td bgcolor="#b8cce4">北京</td>
+              <td>8000</td>
+              <td>9000</td>
+              <td>10000</td>
+              <td>11000</td>
+            </tr>
+            <tr>
+              <td bgcolor="#b8cce4">上海</td>
+              <td>8001</td>
+              <td>9001</td>
+              <td>10001</td>
+              <td>11001</td>
+            </tr>
+          </tbody>
+          <tfoot align="center" valign="middle">
+            <tr>
+              <td height="30px" bgcolor="#b8cce4">
+                合计
+              </td>
+              <td>16001</td>
+              <td>18001</td>
+              <td>20001</td>
+              <td>22001</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   );
 };
