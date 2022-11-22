@@ -238,6 +238,106 @@ const App = () => {
           </tfoot>
         </table>
       </div>
+
+      {/* 表格属性 
+      width：表格的的宽度，px、%
+　　align：表格相对周围元素的对齐方式：left、center、right
+　　border：表格边框的宽度，px
+　　bgcolor：表格的背景颜色，rgb、#xxx、colorname
+　　cellpadding：单元边沿与其他内容之间的空白，px，%
+　　cellspacing：单元格之间的空白，px，%
+　　frame：规定外侧边框的哪个部分时可见的，属性值
+　　rules：规定内侧边框的哪个部分时可见的，属性值
+
+ */}
+      {/* frame属性：
+　　void：不显示外侧边框
+　　above：显示上部的外侧边框
+　　below：显示下部的外侧边框
+　　hsides：显示上部和下部的外侧边框
+　　vsides：显示左边和右边的外侧边框
+　　lhs：显示左边的外侧边框
+　　rhs：显示右边的外侧边框
+　　box：在所有四个边上显示外侧边框
+　　border：在所有四个边上显示外侧边框 */}
+
+      {/* rules属性：
+
+　　none：没有线条
+　　groups：位于行组合列组之间的线条
+　　rows：位于行之间的线条
+　　cols：位于列之间的线条
+　　all：位于行和列之间的线条 */}
+      <div>
+        <table
+          border="6"
+          width="500px"
+          bgcolor="#f2f2f2"
+          cellspacing="0"
+          cellpadding="5"
+          align="center"
+          // frame="above"
+          // rules="cols"
+        >
+          <caption> 统计图 </caption>
+          {/* thead、tbody、tfoot标签属性
+      　　align：thead、tbody、tfoot内容的水平对齐，left、center、right、justify、char
+      　　valign：thead、tbody、tfoot内容的垂直对齐，top、middle、bottom、baseline */}
+          <thead>
+            {/* tr标签属性
+          　　align：行内容的水平对齐，left、center、right、justify、char
+          　　valign：行内容的垂直对齐，top、middle、bottom、baseline
+          　　bgcolor：行的背景颜色，rgb、#xxx、colorname */}
+            <tr bgcolor="#2e8b57">
+              <th>城市</th>
+              <th>2017</th>
+              <th>2018</th>
+              <th>2019</th>
+              <th>2020</th>
+            </tr>
+            <tr bgcolor="#2e8b57">
+              <th>城市</th>
+              <th>上半年</th>
+              <th>下半年</th>
+              <th>2019</th>
+              <th>2020</th>
+            </tr>
+          </thead>
+          <tbody align="center" valign="middle">
+            {/* td、tr标签属性：
+        　　align：单元格内容的水平对齐，left、center、right、justify、char
+        　　valign：单元格内容的垂直对齐，top、middle、bottom、baseline
+        　　bgcolor：单元格的背景颜色，rgb、#xxx、colorname
+        　　width：单元格的宽度，px、%
+        　　heigh：单元格的高度，px、% */}
+            <tr>
+              <td bgcolor="#b8cce4">北京</td>
+              <td>8000</td>
+              <td>9000</td>
+              <td>10000</td>
+              <td>11000</td>
+            </tr>
+            <tr>
+              <td bgcolor="#b8cce4">上海</td>
+              <td>8001</td>
+              <td>9001</td>
+              <td>10001</td>
+              <td>11001</td>
+            </tr>
+          </tbody>
+          <tfoot align="center" valign="middle">
+            <tr>
+              <td height="30px" bgcolor="#b8cce4">
+                合计
+              </td>
+              <td>16001</td>
+              <td>18001</td>
+              <td>20001</td>
+              <td>22001</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
   );
 };
