@@ -405,39 +405,39 @@ const App = () => {
               <table align="center" width="1024px">
                 <tr>
                   <td width="240px" valign="top">
-                    <table width="100%" bgcolor="#ffffff">
+                    <table width="100%" bgcolor="green">
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           关于我们
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           团队介绍
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           人才招聘
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           联系我们
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           常见问题
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           意见反馈
                         </td>
                       </tr>
                       <tr>
-                        <td align="center" height="60px">
+                        <td align="center" height="60px" width="100px">
                           友情链接
                         </td>
                       </tr>
@@ -498,6 +498,232 @@ const App = () => {
             <td>11111111111</td>
           </tr>
         </table>
+      </div>
+      <div>
+        {/* form标签中，以下标签实现表单元素添加
+    　　<input>：表单单行输入标签
+    　　<select>：菜单和列表标签
+    　　<option>：菜单和列表项目标签
+    　　<textarea>：文本域标签
+    　　<optgroup>：菜单和列表项目分组标签 */}
+
+        {/* form标签 可用属性：
+          action：提交表单发送数据的地址
+      　　method：请求方式，get、post
+      　　name：表单的名称
+      　　target：在何处打开action url，_blank、_self、_parent、_top
+      　　enctype：表单数据类型的编码，content type */}
+        <h3 align="center">注册信息</h3>
+        <hr color="#336699" />
+        <form
+          action="/test/api"
+          method="post"
+          name=""
+          target="_blank"
+          enctype="application/x-www-form-urlencode"
+        >
+          {/* type属性类型：
+        　　text：文字域
+        　　password：密码域
+        　　file：文件域
+        　　checkbox：复选域
+        　　radio：单选域
+        　　button：按钮
+        　　submit：提交按钮
+        　　reset：重置按钮
+        　　hidden：隐藏域
+        　　image：图像域 */}
+
+          {/* input属性：
+      　　name：文字域的名称
+      　　maxlength：指用户输入的最大字符长度
+      　　size：指文本框的宽度，以字符个数为单位，文本框的缺省值宽度是20个字符
+      　　value：值文本框的默认值
+      　　placeholder：规定用户填写输入字段的提示  */}
+
+          {/* select可用属性：
+        　　name：设置下拉菜单和列表的名称
+        　　multiple：设置可选择多个项
+        　　size：设置列表中可见选项的数目
+    option可用属性：
+        　　selected：设置选项初始选中状态
+        　　value：定义送往服务器的选项值 */}
+
+          {/* textarea可用属性：
+        　　name：设置文本域的名称
+        　　placeholder：设置描述文本域预期值的简单提示
+        　　rows：设置文本区内的可见行数
+        　　cols：设置文本区内的可见宽度 */}
+          <table align="center" bgcolor="#f2f2f2" width="800px">
+            <tr>
+              <td align="right">账号：</td>
+              <td align=" left">
+                <input
+                  type="text"
+                  name="username"
+                  size="25"
+                  maxlength="6"
+                  placeholder="输入账号"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">邮箱：</td>
+              <td align="left">
+                <input type="text" name="email" value="@qq.com" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">密码：</td>
+              <td align="left">
+                <input
+                  type="password"
+                  name="password"
+                  size="25"
+                  maxlength="6"
+                  placeholder="输入密码"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">确认密码：</td>
+              <td align="left">
+                <input
+                  type="password"
+                  name="pwd_confirm"
+                  size="25"
+                  maxlength="6"
+                  placeholder="确认密码"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">上传文件：</td>
+              <td align="left">
+                <input type="file" name="file" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">性别：</td>
+              <td align="left">
+                男<input type="radio" name="sex" value="man" />
+                女<input type="radio" name="sex" value="woman" />
+                保密
+                <input type="radio" name="sex" value="bm" checked />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">爱好：</td>
+              <td align="left">
+                写代码
+                <input type="checkbox" name="ck" value="1" />
+                敲代码
+                <input type="checkbox" name="ck" value="2" checked />
+                看代码
+                <input type="checkbox" name="ck" value="3" checked />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">城市：</td>
+              <td align="left">
+                <select name="city">
+                  <option value="">--请选择--</option>
+                  <option value="北京">北京</option>
+                  <option value="上海">上海</option>
+                  <option value="广州">广州</option>
+                </select>
+
+                <select name="city1">
+                  <option value="北京" selected>
+                    北京
+                  </option>
+                  <option value="上海">上海</option>
+                  <option value="广州">广州</option>
+                </select>
+
+                <select name="city2" size="2">
+                  <option value="北京">北京</option>
+                  <option value="上海">上海</option>
+                  <option value="广州">广州</option>
+                </select>
+
+                <select name="city3" size="2" multiple>
+                  <option value="北京">北京</option>
+                  <option value="上海">上海</option>
+                  <option value="广州">广州</option>
+                </select>
+
+                <select name="city4">
+                  <option value="">请选择</option>
+                  <optgroup label="第一组">
+                    <option value="北京">北京</option>
+                  </optgroup>
+                  <optgroup label="第二组">
+                    <option value="上海" selected>
+                      上海
+                    </option>
+                    <option value="广州">广州</option>
+                  </optgroup>
+                </select>
+
+                <select name="city5" size="3">
+                  <option value="">请选择</option>
+                  <optgroup label="第一组">
+                    <option value="北京">北京</option>
+                  </optgroup>
+                  <optgroup label="第二组">
+                    <option value="上海" selected>
+                      上海
+                    </option>
+                    <option value="广州">广州</option>
+                  </optgroup>
+                </select>
+
+                <select name="city6" size="3" multiple>
+                  <option value="">请选择</option>
+                  <optgroup label="第一组">
+                    <option value="北京">北京</option>
+                  </optgroup>
+                  <optgroup label="第二组">
+                    <option value="上海">上海</option>
+                    <option value="广州">广州</option>
+                  </optgroup>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">简介：</td>
+              <td align="left">
+                <textarea
+                  name="jj"
+                  id=""
+                  cols="60"
+                  rows="3"
+                  placeholder="个人介绍"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <input type="button" value="普通按钮" />
+                <input
+                  type="image"
+                  alt="nihao"
+                  value="图像域按钮"
+                  src="./截图.png"
+                  width="85px"
+                  height="30px"
+                />
+                <input type="submit" value="点击提交" />
+                <input type="reset" value="点击重置" />
+                <input
+                  type="hidden"
+                  value="此input标签不会展示到页面，但是真实存在的"
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
       </div>
     </div>
   );
