@@ -6,6 +6,7 @@ import { Tasks } from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import About from "./components/About";
 import to from "./images/logo192.png";
+import "./app.css";
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -729,6 +730,19 @@ const App = () => {
           　　span标签：行内标签，没有实际意义，在一行，不换行 */}
         </div>
       </div>
+      <div class="container">
+        <p>这是p标签</p>
+        <img src="截图.jpg" alt="" />
+        <p>这是p标签</p>
+      </div>
+      <div class="contain">
+        <div class="div1">111</div>
+        <div class="div2">222</div>
+        <div class="div3">333</div>
+        {/* 清除浮动 */}
+        <div class="clear"></div>
+      </div>
+      <div class="div4">444</div>
     </div>
   );
 };
