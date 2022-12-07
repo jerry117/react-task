@@ -8,6 +8,7 @@
     width: 400px;
     /* height: 300px; */
     border: 2px solid #333;
+    /* overflow: hidden;  */   /* 方法二 */  
   }
 .div1 {
     width: 100px;
@@ -30,6 +31,11 @@
     color: #fff;
     float: right;
     }
-.clear {
-    clear: both;
+.clearfix:after {
+    content: "."; /* 内容为空 */
+    height: 0; /* 高度为0 */
+    display: block; /* 转化为块级元素 */
+    visibility: hidden; /* 显示方式为隐藏 */
+    clear: both; /* 清除浮动 */
+    /* none 不清除 left 清除左浮动 right 清除右浮动 both 清除左右浮动 */
 }

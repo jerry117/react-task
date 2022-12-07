@@ -735,14 +735,98 @@ const App = () => {
         <img src="截图.jpg" alt="" />
         <p>这是p标签</p>
       </div>
-      <div class="contain">
+      {/* 伪元素写法 */}
+      <div class="contain clearfix">
         <div class="div1">111</div>
         <div class="div2">222</div>
         <div class="div3">333</div>
         {/* 清除浮动 */}
-        <div class="clear"></div>
+        {/* <div class="clear"></div> */}
       </div>
       <div class="div4">444</div>
+
+      <div>
+        <header>
+          <div>LOGO</div>
+          <nav>
+            <a href="https://www" alt="">
+              菜单一
+            </a>
+            <a href="https://www" alt="">
+              菜单二
+            </a>
+            <a href="https://www" alt="">
+              菜单三
+            </a>
+          </nav>
+        </header>
+
+        <section>
+          <hgroup>
+            <h1>文章标题</h1>
+            <h3>作者</h3>
+            <h4>文章标题</h4>
+          </hgroup>
+          <aside>
+            <a href="#se1">Section1</a>
+            <a href="#se2">Section2</a>
+            <a href="#se3">Section3</a>
+          </aside>
+          <article>
+            Section1
+            文章第一段，文章第一段，文章第一段，文章第一段，文章第一段，
+            Section2
+            文章第二段，文章第二段，文章第二段，文章第二段，文章第二段，
+            Section3
+            文章第三段，文章第三段，文章第三段，文章第三段，文章第三段，
+          </article>
+        </section>
+
+        <section>
+          <figure>
+            <div class="video">...</div>
+          </figure>
+        </section>
+
+        <section>
+          <dialog>
+            <dt>对话一</dt>
+            <dd>回复一</dd>
+            <dt>对话二</dt>
+            <dd>回复二</dd>
+          </dialog>
+          <dialog>
+            <dt>对话一</dt>
+            <dd>回复一</dd>
+            <dt>对话二</dt>
+            <dd>回复二</dd>
+          </dialog>
+        </section>
+
+        <footer>Copyright</footer>
+      </div>
+      <meter
+        value="120"
+        min="20"
+        max="380"
+        low="200"
+        high="240"
+        optimum="220"
+      ></meter>
+      <progress value="30" max="100"></progress>
+      <progress max="100"></progress>
+      {/* 列表标签 */}
+      <input placeholder="请选择" list="data-list" />
+      <datalist id="data-list">
+        <option value="选项1">选项1</option>
+        <option value="选项2">选项2</option>
+        <option value="选项3">选项3</option>
+      </datalist>
+
+      <details open="open">
+        <summary>点击展开内容</summary>
+        <p>这是文字内容</p>
+      </details>
     </div>
   );
 };
